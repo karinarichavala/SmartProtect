@@ -1,0 +1,291 @@
+/* ========================================
+   RESPONSIVE STYLES
+======================================== */
+
+/* Tablets and below (max-width: 1024px) */
+@media screen and (max-width: 1024px) {
+  :root {
+    --font-size-5xl: 2.5rem;
+    --font-size-4xl: 2rem;
+    --font-size-3xl: 1.75rem;
+  }
+
+  .hero__container,
+  .product__container,
+  .contact__container {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-xl);
+  }
+
+  .hero__image,
+  .product__image {
+    order: -1;
+  }
+
+  .hero__image-icon,
+  .product__image-icon {
+    font-size: 8rem;
+  }
+
+  .footer__content {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .pricing__grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Mobile devices (max-width: 768px) */
+@media screen and (max-width: 768px) {
+  :root {
+    --font-size-5xl: 2rem;
+    --font-size-4xl: 1.75rem;
+    --font-size-3xl: 1.5rem;
+    --spacing-2xl: 3rem;
+  }
+
+  .container {
+    padding: 0 var(--spacing-sm);
+  }
+
+  /* Navigation */
+  .nav__menu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 80%;
+    max-width: 400px;
+    height: 100vh;
+    background-color: var(--bg-color);
+    padding: var(--spacing-2xl) var(--spacing-lg);
+    box-shadow: var(--shadow-xl);
+    transition: right var(--transition-base);
+    z-index: var(--z-index-modal);
+  }
+
+  .nav__menu.show {
+    right: 0;
+  }
+
+  .nav__list {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--spacing-lg);
+  }
+
+  .nav__toggle {
+    display: block;
+  }
+
+  .nav__close {
+    display: block;
+    position: absolute;
+    top: var(--spacing-md);
+    right: var(--spacing-md);
+  }
+
+  /* Hero Section */
+  .hero {
+    padding: 100px 0 60px;
+  }
+
+  .hero__title {
+    font-size: var(--font-size-4xl);
+  }
+
+  .hero__buttons {
+    flex-direction: column;
+  }
+
+  .hero__buttons .btn {
+    width: 100%;
+  }
+
+  .hero__stats {
+    flex-direction: column;
+    gap: var(--spacing-md);
+  }
+
+  .hero__image-icon,
+  .product__image-icon {
+    font-size: 6rem;
+  }
+
+  /* Benefits Section */
+  .benefits__grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Pricing Section */
+  .pricing-card__badge {
+    top: var(--spacing-md);
+    right: var(--spacing-md);
+  }
+
+  /* Contact Form */
+  .contact__form {
+    grid-template-columns: 1fr;
+    padding: var(--spacing-md);
+  }
+
+  /* Footer */
+  .footer__content {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-lg);
+  }
+
+  .footer__bottom {
+    flex-direction: column;
+    gap: var(--spacing-md);
+    text-align: center;
+  }
+
+  /* Scroll to top */
+  .scroll-top {
+    bottom: 20px;
+    right: 20px;
+    width: 45px;
+    height: 45px;
+  }
+}
+
+/* Small mobile devices (max-width: 480px) */
+@media screen and (max-width: 480px) {
+  :root {
+    --font-size-5xl: 1.75rem;
+    --font-size-4xl: 1.5rem;
+    --font-size-3xl: 1.25rem;
+    --font-size-2xl: 1.125rem;
+  }
+
+  .hero__title {
+    font-size: var(--font-size-3xl);
+  }
+
+  .section__title {
+    font-size: var(--font-size-3xl);
+  }
+
+  .hero__image-icon,
+  .product__image-icon {
+    font-size: 5rem;
+  }
+
+  .benefit-card,
+  .pricing-card {
+    padding: var(--spacing-md);
+  }
+
+  .stat__number {
+    font-size: var(--font-size-2xl);
+  }
+
+  .pricing-card__amount {
+    font-size: var(--font-size-4xl);
+  }
+}
+
+/* Landscape orientation for tablets */
+@media screen and (max-width: 1024px) and (orientation: landscape) {
+  .hero {
+    padding: 100px 0 60px;
+  }
+
+  .hero__container {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .hero__image {
+    order: 0;
+  }
+}
+
+/* Print styles */
+@media print {
+  .header,
+  .nav__toggle,
+  .hero__buttons,
+  .scroll-top {
+    display: none;
+  }
+
+  body {
+    font-size: 12pt;
+    line-height: 1.5;
+    color: #000;
+  }
+
+  .hero {
+    background: none;
+    color: #000;
+  }
+
+  .hero__title,
+  .hero__description,
+  .section__title {
+    color: #000;
+  }
+
+  .btn {
+    border: 1px solid #000;
+  }
+}
+
+/* Reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* High contrast mode */
+@media (prefers-contrast: high) {
+  :root {
+    --primary-color: #ff4500;
+    --text-color: #000000;
+    --bg-color: #ffffff;
+  }
+
+  .btn--primary {
+    border: 2px solid #000;
+  }
+
+  .nav__link::after {
+    height: 3px;
+  }
+}
+
+/* Dark mode support - DISABLED to maintain consistent design */
+/* @media (prefers-color-scheme: dark) {
+  :root {
+    --text-color: #e2e8f0;
+    --text-light: #a0aec0;
+    --bg-color: #1a202c;
+    --bg-light: #2d3748;
+    --bg-gray: #4a5568;
+    --border-color: #4a5568;
+  }
+
+  .header {
+    background-color: var(--bg-color);
+  }
+
+  .benefit-card,
+  .pricing-card,
+  .contact__form {
+    background-color: var(--bg-light);
+  }
+
+  .form__input,
+  .form__textarea {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    border-color: var(--border-color);
+  }
+} */

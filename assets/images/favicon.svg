@@ -1,0 +1,25 @@
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background circle -->
+  <circle cx="32" cy="32" r="32" fill="#FF6B35"/>
+
+  <!-- Sun rays -->
+  <g opacity="0.3">
+    <rect x="30" y="8" width="4" height="8" rx="2" fill="#FFF"/>
+    <rect x="30" y="48" width="4" height="8" rx="2" fill="#FFF"/>
+    <rect x="8" y="30" width="8" height="4" ry="2" fill="#FFF"/>
+    <rect x="48" y="30" width="8" height="4" ry="2" fill="#FFF"/>
+    <rect x="14.34" y="14.34" width="4" height="8" rx="2" transform="rotate(-45 14.34 14.34)" fill="#FFF"/>
+    <rect x="45.66" y="45.66" width="4" height="8" rx="2" transform="rotate(-45 45.66 45.66)" fill="#FFF"/>
+    <rect x="14.34" y="49.66" width="8" height="4" rx="2" transform="rotate(-45 14.34 49.66)" fill="#FFF"/>
+    <rect x="45.66" y="18.34" width="8" height="4" rx="2" transform="rotate(-45 45.66 18.34)" fill="#FFF"/>
+  </g>
+
+  <!-- Sun circle -->
+  <circle cx="32" cy="32" r="14" fill="#FFF"/>
+
+  <!-- Shield symbol -->
+  <path d="M32 20C28 20 24 22 24 22V32C24 36 28 40 32 42C36 40 40 36 40 32V22C40 22 36 20 32 20Z" fill="#FF6B35"/>
+
+  <!-- Checkmark -->
+  <path d="M29 32L31 34L35 28" stroke="#FFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
